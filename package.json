@@ -1,0 +1,25 @@
+{
+  "name": "bugvrstudio",
+  "version": "1.0.0",
+  "description": "Bug VR Studio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisrdz5/bugvrstudio.git"
+  },
+  "keywords": [
+    "Bug",
+    "VR",
+    "AR",
+    "Studio"
+  ],
+  "author": "Luis Antonio Rodriguez Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luisrdz5/bugvrstudio/issues"
+  },
+  "homepage": "https://github.com/luisrdz5/bugvrstudio#readme"
+}
