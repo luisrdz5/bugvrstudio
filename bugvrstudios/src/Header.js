@@ -12,6 +12,7 @@ class Header extends Component {
           <ul className="right hide-on-med-and-down">
             <li><a href="#">Blog</a></li>
             <li><a href="#">Portafolio</a></li>
+            <li><a href="#">Iniciar Sesión</a></li>
           </ul>
 
           <ul id="nav-mobile" className="side-nav">
