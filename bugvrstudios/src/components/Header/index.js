@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './bugvrlogo.png';
+import { Link } from 'react-router';
 
 class Header extends Component {
   render() {
@@ -10,9 +11,10 @@ class Header extends Component {
             <img src={logo} className="App-logo" alt="logo" /> BugVRStudio
             </a>
           <ul className="right hide-on-med-and-down">
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Portafolio</a></li>
-            <li><a href="#">Iniciar Sesión</a></li>
+            <li><Link to="/"> Inicio </Link></li>
+            <li><Link to="/about"> Acerca de </Link></li>
+            <li><Link to="/blog"> Blog </Link></li>
+            <li><Link to="/portafolio"> Portafolio </Link></li>
           </ul>
 
           <ul id="nav-mobile" className="side-nav">

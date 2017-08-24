@@ -1,11 +1,15 @@
+// src/components/App/index.js
 import React, { Component } from 'react';
-import './App.css';
-import Header from './Header';
-import Body from './Body';
-import Footer from './footer';
+/*import ReactDOM from 'react-dom';*/
+import './style.css';
 import firebase from 'firebase';
+import Header from '../Header';
+import Body from '../Body';
+import Footer from '../Footer';
+// Import routing components
+/*import {Router, Route} from 'react-router';*/
 
-
+ 
 firebase.initializeApp({
     apiKey: "AIzaSyDQzs4ohwJNWr2vjePVtuphsi5sgSuNiNo",
     authDomain: "bugvrstudio.firebaseapp.com",
@@ -14,6 +18,8 @@ firebase.initializeApp({
     storageBucket: "bugvrstudio.appspot.com",
     messagingSenderId: "621054045661"
 });
+
+
 
 class App extends Component {
   render() {
@@ -26,5 +32,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;
