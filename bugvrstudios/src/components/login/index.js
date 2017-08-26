@@ -1,37 +1,21 @@
-// src/components/App/index.js
+// src/components/About/index.js
 import React, { Component } from 'react';
-/*import ReactDOM from 'react-dom';*/
-import './style.css';
-import firebase from 'firebase';
 import Header from '../Header';
-import Body from '../Body';
+import CuerpoLogin from '../CuerpoLogin';
 import Footer from '../Footer';
-// Import routing components
-/*import {Router, Route} from 'react-router';*/
-
- 
-firebase.initializeApp({
-    apiKey: "AIzaSyDQzs4ohwJNWr2vjePVtuphsi5sgSuNiNo",
-    authDomain: "bugvrstudio.firebaseapp.com",
-    databaseURL: "https://bugvrstudio.firebaseio.com",
-    projectId: "bugvrstudio",
-    storageBucket: "bugvrstudio.appspot.com",
-    messagingSenderId: "621054045661"
-});
 
 
+import './style.css';
 
-class App extends Component {
+export default class Blog extends Component {
+
   render() {
     return (
-        <div className="App">
+        <div className="Blog">
           <Header />
-          <Body />
+          <CuerpoLogin />
           <Footer />
-        </div>
+        </div> 
     );
   }
 }
-
-
-export default App;
