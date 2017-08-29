@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 class Header extends Component {
   render() {
     return (
-      <nav className="deep-orange darken-1" role="navigation">
+      <nav className="orange darken-1" role="navigation">
         <div className="nav-wrapper container ">    
           <Link  to="/">
             <img src={logo} className="App-logo" alt="logo" />     BugVRStudio
