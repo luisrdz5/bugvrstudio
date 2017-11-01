@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './bugvrlogo.png';
 import { Link } from 'react-router';
 
+
 class Header extends Component {
   render() {
     return (
@@ -14,11 +15,29 @@ class Header extends Component {
             <li><Link to="/"> Inicio </Link></li>
             <li><Link to="/blog"> Blog </Link></li>
             <li><Link to="/portafolio"> Portafolio </Link></li>
+            <li>
+              <Link to="/login">
+                <button
+                  className='waves-effect waves-light btn blue darken-1'
+                >
+                  Login
+                </button>
+              </Link>
+            </li>
           </ul>
           <ul id="nav-mobile" className="side-nav">
             <li><Link to="/"> Inicio </Link></li>
             <li><Link to="/blog"> Blog </Link></li>
-            <li><Link to="/portafolio"> Portafolio </Link></li>
+            <li><Link to="/portafolio"> Portafolio </Link></li>        
+            <li>
+              <Link to="/login">
+                <button
+                  className='waves-effect waves-light btn blue darken-1'
+                >
+                  Login
+                </button>
+              </Link>
+            </li>
           </ul>
           <a href="#" data-activates="nav-mobile" className="button-collapse"><i className="material-icons">menu</i></a>
         </div>

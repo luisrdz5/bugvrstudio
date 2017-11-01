@@ -1,5 +1,7 @@
 // src/components/About/index.js
 import React, { Component } from 'react';
+import { Link } from 'react-router';
+import posts from'../posts';
 /*import classnames from 'classnames';*/
 
 import './style.css';
@@ -15,23 +17,27 @@ export default class Cuerpo extends Component {
         <div className="container">
           <div className="section">
 
-            <div className="row">
-              <div className="col s12 m4">
-                <div className="icon-block">
-                  <h5 className="center">Blog</h5>
-                  <p className="light">Es cuando la persona tiene una inmersión en un entorno de Escenas y objetos de aparencia real que son generados por Tecnologia.</p>
-                </div>
-              </div>
+            <section className="posts light">
+              <h3 className="center" >Posts </h3>
+              <div className="row">
+                <div className="col s12 ">
+                  <div className="icon-block">
 
-              <div className="col s12 m8">
-                <div className="icon-block">
-                  <h5 className="center">Aqui Va el Blog</h5>
-                  <p className="light">Es la visualización de un entorno real a travez de un dispositivo tecnologico (Actualmente Smartphones) en el cual se monta una realidad visual generada por la tecnologia. </p>
+                        {posts.map(post => 
+                          <article key={post.id} className="post">
+                            <Link to={`/post/${post.id}`}>
+                              <h4>{post.title}</h4>
+                              <p>{post.excerpt}</p>
+                              <span>{post.author} </span>
+                            </Link>
+                          </article>
+                        )}
+                  </div>
                 </div>
-              </div>
-            </div>
+              </div>                  
+            </section>
           </div>
-        </div>
+      </div>
 
     );
   }

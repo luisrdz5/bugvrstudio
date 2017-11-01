@@ -2,26 +2,25 @@
 import React, { Component } from 'react';
 /*import ReactDOM from 'react-dom';*/
 import './style.css';
-import firebase from 'firebase';
 import Header from '../Header';
 import Body from '../Body';
 import Footer from '../Footer';
+import firebase from 'firebase';
 // Import routing components
 /*import {Router, Route} from 'react-router';*/
 
- 
-firebase.initializeApp({
-    apiKey: "AIzaSyDQzs4ohwJNWr2vjePVtuphsi5sgSuNiNo",
-    authDomain: "bugvrstudio.firebaseapp.com",
-    databaseURL: "https://bugvrstudio.firebaseio.com",
-    projectId: "bugvrstudio",
-    storageBucket: "bugvrstudio.appspot.com",
-    messagingSenderId: "621054045661"
-});
+
 
 
 
 class App extends Component {
+
+	handleAuth (){
+		const provider = new firebase.auth.GoogleAuthProvider();
+		firebase.auth().signInWithPopup(provider)
+			.then( result => console.log(`${result.user.email} ha iniciado sesión`))
+			.catch( error => console.log(`Error ${error.code} ${error.message}`))
+	}
   render() {
     return (
         <div className="App">

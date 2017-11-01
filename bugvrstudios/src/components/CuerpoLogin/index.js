@@ -1,16 +1,13 @@
 // src/components/About/index.js
 import React, { Component } from 'react';
-/*import classnames from 'classnames';*/
+
 
 import './style.css';
 
-export default class Cuerpo extends Component {
-  // static propTypes = {}
-  // static defaultProps = {}
-  // state = {}
+export default class CuerpoLogin extends Component {
+
 
   render() {
-/*    const { className, ...props } = this.props;*/
     return (
         <div className="container">
           <div className="section">
@@ -18,11 +15,11 @@ export default class Cuerpo extends Component {
               <div className="col s12">
                 <div className="icon-block col s6  offset-s3 ">
                   <h5 className="center">Iniciar Sesión</h5>
-                  <div className="collection">
-                    <a href="#!" className="collection-item">Iniciar Sesión con Facebook <span className="badge"><i className="fa fa-facebook-official fa-2x" aria-hidden="true"></i></span></a>
-                    <a href="#!" className="collection-item">Iniciar Sesión con Twitter <span className="badge"><i className="fa fa-twitter-square fa-2x" aria-hidden="true"></i></span></a>
-                    <a href="#!" className="collection-item">Iniciar Sesión con Google <span className="badge"><i className="fa fa-google fa-2x" aria-hidden="true"></i></span></a>
-                    <a href="#!" className="collection-item">Iniciar Sesión con Correo Electrónico <span className="badge"><i className="fa fa-envelope fa-2x" aria-hidden="true"></i></span></a>
+                  <div>
+                    <button className="btn-large valign-wrapper orange darken-1 col s12 ">Iniciar Sesión con Facebook <i className="fa fa-facebook-official fa-2x right valign-wrapper " aria-hidden="true"></i></button>
+                    <button className="btn-large valign-wrapper orange darken-1 col s12">Iniciar Sesión con Twitter <i className="fa fa-twitter-square fa-2x right valign-wrapper" aria-hidden="true"></i></button>
+                    <button className="btn-large valign-wrapper orange darken-1 col s12" onClick={this.handleAuth}>Iniciar Sesión con Google <i className="fa fa-google fa-2x right valign-wrapper" aria-hidden="true"></i></button>
+                    <button className="btn-large valign-wrapper orange darken-1 col s12">Iniciar Sesión con Correo Electrónico <i className="fa fa-envelope fa-2x right valign-wrapper" aria-hidden="true"></i></button>
                  </div>
                 </div>
               </div>
