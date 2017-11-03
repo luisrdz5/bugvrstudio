@@ -22,7 +22,6 @@ export default class Cuerpo extends Component {
               <div className="row">
                 <div className="col s12 ">
                   <div className="icon-block">
-
                         {posts.map(post => 
                           <article key={post.id} className="post">
                             <Link to={`/post/${post.id}`}>

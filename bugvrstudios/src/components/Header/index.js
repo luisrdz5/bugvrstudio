@@ -1,10 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from './bugvrlogo.png';
 import { Link } from 'react-router';
 
 
-class Header extends Component {
-  render() {
+function Header ({ appName, user, onAuth, onLogout }) {
+
+  function renderUserData () {
+    return (
+            <Link to="/Logout">
+                <button
+                  className='waves-effect waves-light btn blue darken-1'
+                >
+                  Logout
+                </button>
+              </Link>
+
+    )
+}
+ function renderLoginButton () {
+    return (
+              <Link to="/login">
+                <button
+                  className='waves-effect waves-light btn blue darken-1'
+                >
+                  Login
+                </button>
+              </Link>
+    )
+  }
+
+
     return (
       <nav className="orange darken-1" role="navigation">
         <div className="nav-wrapper container ">    
@@ -16,13 +41,7 @@ class Header extends Component {
             <li><Link to="/blog"> Blog </Link></li>
             <li><Link to="/portafolio"> Portafolio </Link></li>
             <li>
-              <Link to="/login">
-                <button
-                  className='waves-effect waves-light btn blue darken-1'
-                >
-                  Login
-                </button>
-              </Link>
+                {user ? renderUserData() : renderLoginButton()}
             </li>
           </ul>
           <ul id="nav-mobile" className="side-nav">
@@ -30,20 +49,13 @@ class Header extends Component {
             <li><Link to="/blog"> Blog </Link></li>
             <li><Link to="/portafolio"> Portafolio </Link></li>        
             <li>
-              <Link to="/login">
-                <button
-                  className='waves-effect waves-light btn blue darken-1'
-                >
-                  Login
-                </button>
-              </Link>
+                {user ? renderUserData() : renderLoginButton()}
             </li>
           </ul>
           <a href="#" data-activates="nav-mobile" className="button-collapse"><i className="material-icons">menu</i></a>
         </div>
       </nav>
-      );
-  }
+      )
 }
 
 export default Header;

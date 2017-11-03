@@ -1,13 +1,10 @@
 // src/components/About/index.js
-import React, { Component } from 'react';
+import React from 'react';
 
 
 import './style.css';
 
-export default class CuerpoLogin extends Component {
-
-
-  render() {
+function CuerpoLogin () {
     return (
         <div className="container">
           <div className="section">
@@ -18,7 +15,7 @@ export default class CuerpoLogin extends Component {
                   <div>
                     <button className="btn-large valign-wrapper orange darken-1 col s12 ">Iniciar Sesión con Facebook <i className="fa fa-facebook-official fa-2x right valign-wrapper " aria-hidden="true"></i></button>
                     <button className="btn-large valign-wrapper orange darken-1 col s12">Iniciar Sesión con Twitter <i className="fa fa-twitter-square fa-2x right valign-wrapper" aria-hidden="true"></i></button>
-                    <button className="btn-large valign-wrapper orange darken-1 col s12" onClick={this.handleAuth}>Iniciar Sesión con Google <i className="fa fa-google fa-2x right valign-wrapper" aria-hidden="true"></i></button>
+                    <button className="btn-large valign-wrapper orange darken-1 col s12" >Iniciar Sesión con Google <i className="fa fa-google fa-2x right valign-wrapper" aria-hidden="true"></i></button>
                     <button className="btn-large valign-wrapper orange darken-1 col s12">Iniciar Sesión con Correo Electrónico <i className="fa fa-envelope fa-2x right valign-wrapper" aria-hidden="true"></i></button>
                  </div>
                 </div>
@@ -27,5 +24,7 @@ export default class CuerpoLogin extends Component {
           </div>
         </div>
     );
-  }
 }
+
+
+export default CuerpoLogin;
